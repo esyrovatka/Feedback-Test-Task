@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: local('Circular Std'), local('Circular Std'),
+         url('../../assets/fonts/CircularStd-Book.woff') format('woff'),
+}
+
 .feedback_page {
     background-color: #FCF5F3;
+    font-family: 'Circular Std';
 
     .feedback_container {
         width: 80%;
@@ -20,6 +27,20 @@
                 margin: 0 auto;
                 text-align: left;
                 padding: 48px 0 24px;
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 42px;
+                    line-height: 53px;
+                    color: #000;    
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #736B7E;
+                }
             }
         }
 

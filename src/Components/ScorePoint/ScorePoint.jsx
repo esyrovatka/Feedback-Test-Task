@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ScorePoint.scss";
 
 const ScorePoint = () => {
+  const [currScore, setCurrScore] = useState(1);
+
+  const arr = ["1", "2", "3", "4", "5"];
+
+  const handleClick = (i) => () => {
+    setCurrScore(i);
+  };
   return (
     <>
       <div className="score_point">
-        <div className="point">1</div>
-        <div className="point">2</div>
-        <div className="point">3</div>
-        <div className="point">4</div>
-        <div className="point">5</div>
+        {arr.map((item, index) => (
+          <div
+            className={index === currScore - 1 ? "active_point" : `point`}
+            onClick={handleClick(item)}
+            key={item}
+          >
+            {item}
+          </div>
+        ))}
         <div className="point dark_point">n/a</div>
       </div>
     </>

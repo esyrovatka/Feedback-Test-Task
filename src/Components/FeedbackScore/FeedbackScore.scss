@@ -1,3 +1,29 @@
 .feedback_score{
-    
+    h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        color: #000000;
+        margin-bottom: 0px;
+    }
+
+    .score {
+        .category {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 700px;
+            height: 60px;
+            padding-top: 32px;
+
+
+            .text {
+                width: 314px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #736B7E;
+            }
+        }
+    }
 }

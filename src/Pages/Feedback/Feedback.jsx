@@ -12,7 +12,13 @@ const FeedbackPage = () => {
 
         <div className="company_feedback">
           <div className="company">
-            <img className="companyName" alt="companyName" src={companyName} />
+            <img
+              className="companyName"
+              alt="companyName"
+              src={companyName}
+              width="148px"
+              height="27px"
+            />
 
             <div>
               <h2>Feedback for Aglieglie Brazof</h2>
@@ -35,6 +41,8 @@ const FeedbackPage = () => {
             </div>
 
             <FeedbackScore name="Planning" />
+            <FeedbackScore name="Delivering" thirdCategory />
+            <FeedbackScore name="Lorem" thirdCategory />
           </div>
         </div>
       </div>
