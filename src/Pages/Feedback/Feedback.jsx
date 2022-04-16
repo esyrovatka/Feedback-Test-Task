@@ -43,6 +43,9 @@ const FeedbackPage = () => {
             <FeedbackScore name="Planning" />
             <FeedbackScore name="Delivering" thirdCategory />
             <FeedbackScore name="Lorem" thirdCategory />
+            <div className="btn_send">
+              <button className="feedback_btn">Send Feedback</button>
+            </div>
           </div>
         </div>
       </div>

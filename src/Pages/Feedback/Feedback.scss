@@ -23,7 +23,7 @@
             background-color: #fff;
 
             .company{
-                width: 60%;
+                width: 70%;
                 margin: 0 auto;
                 text-align: left;
                 padding: 48px 0 24px;
@@ -41,6 +41,27 @@
                     line-height: 20px;
                     color: #736B7E;
                 }
+                .btn_send{
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-top: 80px;
+
+                    .feedback_btn{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 12px 16px;
+                        background: #464BFF;
+                        border-radius: 22px 22px 0px 22px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: #FFFFFF;
+                    }
+                }
+
             }
         }
 
