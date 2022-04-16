@@ -1,0 +1,29 @@
+.feedback_page {
+    background-color: #FCF5F3;
+
+    .feedback_container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 40px 0px;
+
+        .logo_img {
+            padding-bottom: 47px;
+        }
+
+        .company_feedback{
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+
+            .company{
+                width: 60%;
+                margin: 0 auto;
+                text-align: left;
+                padding: 48px 0 24px;
+            }
+        }
+
+    }
+
+  
+}

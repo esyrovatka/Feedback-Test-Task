@@ -1,0 +1,17 @@
+.score_point{
+    display: flex;
+
+    .point {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 24px;
+        width: 57px;
+        height: 52px;
+        border: 1px solid #EEEBF2;
+    }
+
+    .dark_point{
+        background-color: #EEEBF2;
+    }
+}
