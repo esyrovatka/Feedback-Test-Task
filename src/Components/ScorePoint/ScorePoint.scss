@@ -1,0 +1,43 @@
+.score_point{
+    display: flex;
+    .point {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 24px;
+        border: 1px solid #EEEBF2;
+        color: #736B7E;
+    }
+
+    .dark_point{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 24px;
+        border: 1px solid #EEEBF2;
+        background-color: #EEEBF2;
+        color: #736B7E;
+    }
+
+    .active_point{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 24px;
+        background: #464BFF;
+        border: 1px solid #EEEBF2;
+        color: #fff;
+        
+    }
+    @media (max-width: 420px){
+        .point, .dark_point, .active_point {
+            padding: 12px 22px;
+        }
+    }
+
+    @media (max-width: 370px){
+        .point, .dark_point, .active_point {
+            padding: 9px 16px;
+        }
+    }
+}

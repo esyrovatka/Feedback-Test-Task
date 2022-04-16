@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: local('Circular Std'), local('Circular Std'),
+         url('../../assets/fonts/CircularStd-Book.woff') format('woff'),
+}
+
+.feedback_page {
+    background-color: #FCF5F3;
+    font-family: 'Circular Std';
+
+    .feedback_container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 40px 0px;
+        .logo_img {
+            padding-bottom: 47px;
+        }
+
+        .company_feedback{
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            .company{
+                width: 70%;
+                margin: 0 auto;
+                text-align: left;
+                padding: 48px 0 24px;
+                @media (max-width: 1200px){
+                    width: 80%;
+                }
+                @media (max-width: 1024px){
+                    width: 90%;
+                }
+                h2 {
+                    font-weight: 700;
+                    font-size: 42px;
+                    line-height: 53px;
+                    color: #000;   
+                    margin: 40px 0 16px; 
+
+                    @media (max-width: 764px){
+                        margin:  16px 0; 
+
+                    }
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #736B7E;
+                }
+                .btn_send{
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-top: 80px;
+
+                    .feedback_btn{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 12px 16px;
+                        background: #464BFF;
+                        border-radius: 22px 22px 0px 22px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: #FFFFFF;
+                        border: none;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    @media (max-width: 1400px) {
+        .feedback_container {
+            width: 90%;
+            .company_feedback {
+                width: 90%;
+                .company{
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .feedback_container {
+            width: 95%;
+            .company_feedback {
+                width: 100%;
+                .company{
+                    width: 95%;
+                    padding: 24px 0;
+                }
+            }
+        }
+    }
+
+  
+}
