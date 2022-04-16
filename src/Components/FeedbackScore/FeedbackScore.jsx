@@ -1,8 +1,9 @@
 import React from "react";
+
 import ScorePoint from "../ScorePoint/ScorePoint";
 import "./FeedbackScore.scss";
 
-const FeedbackScore = ({ name, thirdCategory }) => {
+const FeedbackScore = ({ name, thirdCategory, score }) => {
   return (
     <div className="feedback_score">
       <h3>{name}</h3>
@@ -15,7 +16,7 @@ const FeedbackScore = ({ name, thirdCategory }) => {
           </div>
 
           <div className="score_point">
-            <ScorePoint />
+            <ScorePoint score={score.firstVal} />
           </div>
         </div>
 
@@ -26,7 +27,7 @@ const FeedbackScore = ({ name, thirdCategory }) => {
           </div>
 
           <div className="score_point">
-            <ScorePoint />
+            <ScorePoint score={score.secondVal} />
           </div>
         </div>
 
@@ -38,7 +39,7 @@ const FeedbackScore = ({ name, thirdCategory }) => {
             </div>
 
             <div className="score_point">
-              <ScorePoint />
+              <ScorePoint score={score.thirdVal} />
             </div>
           </div>
         )}

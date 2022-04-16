@@ -3,8 +3,10 @@ import "./Feedback.scss";
 import logo from "../../images/Frame.png";
 import companyName from "../../images/companyName.png";
 import FeedbackScore from "../../Components/FeedbackScore/FeedbackScore";
-
+import { useSelector } from "react-redux";
+import { getScore } from "../../redux/selectors";
 const FeedbackPage = () => {
+  const score = useSelector(getScore);
   return (
     <div className="feedback_page">
       <div className="feedback_container">
@@ -40,9 +42,13 @@ const FeedbackPage = () => {
               </p>
             </div>
 
-            <FeedbackScore name="Planning" />
-            <FeedbackScore name="Delivering" thirdCategory />
-            <FeedbackScore name="Lorem" thirdCategory />
+            <FeedbackScore name="Planning" score={score.Planning} />
+            <FeedbackScore
+              name="Delivering"
+              thirdCategory
+              score={score.Delivering}
+            />
+            <FeedbackScore name="Lorem" thirdCategory score={score.Lorem} />
             <div className="btn_send">
               <button className="feedback_btn">Send Feedback</button>
             </div>

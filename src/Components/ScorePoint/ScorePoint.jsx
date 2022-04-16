@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./ScorePoint.scss";
 
-const ScorePoint = () => {
-  const [currScore, setCurrScore] = useState(1);
+const ScorePoint = ({ score }) => {
+  const [currScore, setCurrScore] = useState(score);
 
   const arr = ["1", "2", "3", "4", "5"];
 
