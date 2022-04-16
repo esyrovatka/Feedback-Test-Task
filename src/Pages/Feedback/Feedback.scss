@@ -12,7 +12,6 @@
         width: 80%;
         margin: 0 auto;
         padding: 40px 0px;
-
         .logo_img {
             padding-bottom: 47px;
         }
@@ -21,13 +20,17 @@
             width: 80%;
             margin: 0 auto;
             background-color: #fff;
-
             .company{
                 width: 70%;
                 margin: 0 auto;
                 text-align: left;
                 padding: 48px 0 24px;
-
+                @media (max-width: 1200px){
+                    width: 80%;
+                }
+                @media (max-width: 1024px){
+                    width: 90%;
+                }
                 h2 {
                     font-weight: 700;
                     font-size: 42px;
@@ -59,12 +62,37 @@
                         line-height: 20px;
                         text-align: center;
                         color: #FFFFFF;
+                        border: none;
                     }
                 }
 
             }
         }
 
+    }
+
+    @media (max-width: 1400px) {
+        .feedback_container {
+            width: 90%;
+            .company_feedback {
+                width: 90%;
+                .company{
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .feedback_container {
+            width: 95%;
+            .company_feedback {
+                width: 100%;
+                .company{
+                    width: 95%;
+                }
+            }
+        }
     }
 
   

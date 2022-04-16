@@ -16,6 +16,13 @@
             padding-top: 32px;
             justify-content: space-between;
 
+            @media (max-width: 992px){
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+
+            }
+
 
             .text {
                 width: 314px;

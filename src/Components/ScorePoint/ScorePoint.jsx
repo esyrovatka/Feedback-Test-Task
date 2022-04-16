@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./ScorePoint.scss";
 
+const arr = [1, 2, 3, 4, 5];
+
 const ScorePoint = ({ score, category, currVal, changeScore }) => {
   const [currScore, setCurrScore] = useState({
     Category: category,
     number: currVal,
     value: score,
   });
-
-  const arr = [1, 2, 3, 4, 5];
 
   const handleClick = (i) => () => {
     setCurrScore({ ...currScore, value: i });

@@ -2,18 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   Planning: {
-    firstVal: 1,
-    secondVal: 2,
+    firstVal: 4,
+    secondVal: 5,
   },
   Delivering: {
-    firstVal: 1,
-    secondVal: 2,
-    thirdVal: 3,
+    firstVal: 2,
+    secondVal: 5,
+    thirdVal: 4,
   },
   Lorem: {
-    firstVal: 1,
+    firstVal: 4,
     secondVal: 2,
-    thirdVal: 3,
+    thirdVal: 5,
   },
 };
 

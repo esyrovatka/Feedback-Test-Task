@@ -1,7 +1,7 @@
 import React from "react";
 import ScorePoint from "../ScorePoint/ScorePoint";
 import "./FeedbackScore.scss";
-import { category } from "../../assets/constants/constants";
+import { category } from "../../constants/constants";
 
 const FeedbackScore = ({ name, thirdCategory, score, changeScore }) => {
   return (

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Feedback.scss";
-import logo from "../../images/Frame.png";
-import companyName from "../../images/companyName.png";
+import logo from "../../assets/images/Frame.png";
+import companyName from "../../assets/images/companyName.png";
 import FeedbackScore from "../../Components/FeedbackScore/FeedbackScore";
 import { useDispatch, useSelector } from "react-redux";
 import { getScore } from "../../redux/selectors";
 import { changeVal } from "../../redux/features/score/scoreSlice";
-import { feedbackPage } from "../../assets/constants/constants";
+import { feedbackPage } from "../../constants/constants";
 const FeedbackPage = () => {
   const allScore = useSelector(getScore);
   const [score, setScore] = useState(allScore);
