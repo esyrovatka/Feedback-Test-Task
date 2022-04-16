@@ -21,18 +21,12 @@ export const scoreSlice = createSlice({
   name: "score",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    changeVal: (state, { payload }) => {
+      return { ...payload };
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = scoreSlice.actions;
+export const { changeVal } = scoreSlice.actions;
 
 export default scoreSlice.reducer;

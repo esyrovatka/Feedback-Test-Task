@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Feedback.scss";
 import logo from "../../images/Frame.png";
 import companyName from "../../images/companyName.png";
 import FeedbackScore from "../../Components/FeedbackScore/FeedbackScore";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getScore } from "../../redux/selectors";
+import { changeVal } from "../../redux/features/score/scoreSlice";
+import { feedbackPage } from "../../assets/constants/constants";
 const FeedbackPage = () => {
-  const score = useSelector(getScore);
+  const allScore = useSelector(getScore);
+  const [score, setScore] = useState(allScore);
+  useEffect(() => {
+    setScore(allScore);
+  }, [allScore]);
+
+  const dispatch = useDispatch();
+
+  const changeScore = (currScore) => {
+    const { Category, number, value } = currScore;
+    const newScore = JSON.parse(JSON.stringify(score));
+    newScore[Category][number] = value;
+    setScore(newScore);
+  };
+
+  const SendClick = () => {
+    dispatch(changeVal(score));
+  };
+
   return (
     <div className="feedback_page">
       <div className="feedback_container">
@@ -23,34 +43,32 @@ const FeedbackPage = () => {
             />
 
             <div>
-              <h2>Feedback for Aglieglie Brazof</h2>
-
-              <p>
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem
-                Lorem Ipsum dolorem Lorem Ipsum dolorem Lorem Ipsum dolorem.
-              </p>
-              <p>
-                Thank you for your contribution to this very important process.
-              </p>
+              <h2>{feedbackPage.title}</h2>
+              <p>{feedbackPage.paragraph_1}</p>
+              <p>{feedbackPage.paragraph_2}</p>
             </div>
 
-            <FeedbackScore name="Planning" score={score.Planning} />
+            <FeedbackScore
+              name="Planning"
+              score={score.Planning}
+              changeScore={changeScore}
+            />
             <FeedbackScore
               name="Delivering"
               thirdCategory
               score={score.Delivering}
+              changeScore={changeScore}
             />
-            <FeedbackScore name="Lorem" thirdCategory score={score.Lorem} />
+            <FeedbackScore
+              name="Lorem"
+              thirdCategory
+              score={score.Lorem}
+              changeScore={changeScore}
+            />
             <div className="btn_send">
-              <button className="feedback_btn">Send Feedback</button>
+              <button className="feedback_btn" onClick={SendClick}>
+                {feedbackPage.btn_1}
+              </button>
             </div>
           </div>
         </div>
