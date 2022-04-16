@@ -35,7 +35,13 @@
                     font-weight: 700;
                     font-size: 42px;
                     line-height: 53px;
-                    color: #000;    
+                    color: #000;   
+                    margin: 40px 0 16px; 
+
+                    @media (max-width: 764px){
+                        margin:  16px 0; 
+
+                    }
                 }
 
                 p {
@@ -90,6 +96,7 @@
                 width: 100%;
                 .company{
                     width: 95%;
+                    padding: 24px 0;
                 }
             }
         }
